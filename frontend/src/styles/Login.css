@@ -1,0 +1,40 @@
+.login-bg {
+  min-height: 85vh;
+  width: 100vw;
+  /* background-image: url('https://www.freepik.com/free-vector/flat-geometric-background_13900625.htm#fromView=keyword&page=1&position=40&uuid=7acc0ddd-2843-49db-8f47-43bc54317dee&query=Data+analytics+background'); */
+  background-color: rgb(43, 9, 122);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.login-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-right: 490px;
+  /* margin-left: 450px; */
+  /* background-color: rgb(129, 137, 141); */
+}
+
+.login-content h2{
+    color: rgb(195, 11, 26);
+}
+
+.login-content .register-section{
+   color: rgb(193, 220, 235);
+}
+/* 
+.login-content button{
+    background-color: black;
+} */
