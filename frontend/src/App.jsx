@@ -26,12 +26,14 @@ function AppContent({ user, setUser }) {
 
   // Redirect to home page on refresh if logged in
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const isFirstLoad = performance.getEntriesByType("navigation")[0]?.type === "reload";
-    if (token && isFirstLoad && location.pathname !== "/") {
-      navigate("/", { replace: true });
-    }
-  }, [navigate,location.pathname]);
+  const token = localStorage.getItem("token");
+  const isFirstLoad =
+    performance.getEntriesByType("navigation")[0]?.type === "reload";
+
+  if (token && isFirstLoad && location.pathname !== "/") {
+    navigate("/", { replace: true });
+  }
+}, [navigate, location.pathname]);
 
   return (
     <>
