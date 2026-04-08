@@ -31,7 +31,7 @@ function AppContent({ user, setUser }) {
     if (token && isFirstLoad && location.pathname !== "/") {
       navigate("/", { replace: true });
     }
-  }, []);
+  }, [navigate,location.pathname]);
 
   return (
     <>
