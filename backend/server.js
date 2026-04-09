@@ -18,8 +18,14 @@ const app = express();
 const allowedOrigins = ["http://localhost:3000", "https://excel-analyzer-bice.vercel.app/"]
 app.use(
   cors({
-    origin: allowedOrigins, // React frontend URL
-    credentials: true,
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true
   })
 );
 
