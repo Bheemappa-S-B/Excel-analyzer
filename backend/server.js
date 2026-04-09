@@ -15,10 +15,10 @@ config({ path: ".env" });
 const app = express();
 
 // Enable CORS for frontend requests
-const allowedOrigins=["http://localhost:3000","https://excel-analyzer-bice.vercel.app/"]
+const allowedOrigins = ["http://localhost:3000", "https://excel-analyzer-bice.vercel.app/"]
 app.use(
   cors({
-    origin:allowedOrigins , // React frontend URL
+    origin: allowedOrigins, // React frontend URL
     credentials: true,
   })
 );
@@ -56,5 +56,5 @@ mongoose
   .then(() => console.log("MongoDb Connected...!"))
   .catch((err) => console.log(err));
 
-const port = 1000;
+const port = process.env.PORT || 1000;
 app.listen(port, () => console.log(`server is running on port ${port}`));
