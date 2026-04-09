@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:1000/api",
+  baseURL: "https://excel-analyzer-bla0.onrender.com/",
 });
 
 export const setAuthToken = (token) => {
