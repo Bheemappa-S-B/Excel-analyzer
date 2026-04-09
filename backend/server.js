@@ -15,7 +15,6 @@ config({ path: ".env" });
 const app = express();
 
 // Enable CORS for frontend requests
-const allowedOrigins = ["http://localhost:3000", "https://excel-analyzer-bice.vercel.app/"]
 app.use(
   cors({
     origin: [
@@ -31,9 +30,9 @@ app.use(
 app.use(express.json());
 
 // Routes
-app.use("/api/user", userRouter);
-app.use("/api/auth", authRoutes);
-app.use("/api/upload", uploadRoutes);
+app.use("/user", userRouter);
+app.use("/auth", authRoutes);
+app.use("/upload", uploadRoutes);
 
 // DELETE file route
 app.delete("/api/upload/:id", async (req, res) => {
