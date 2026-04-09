@@ -15,7 +15,7 @@ config({ path: ".env" });
 const app = express();
 
 // Enable CORS for frontend requests
-const allowedOrigins=["http://localhost:3000","https://vercel.com/bheemappas-projects/excel-analyzer/Ezgcsi7jY1o8zwaEhqpNktcdYMXu"]
+const allowedOrigins=["http://localhost:3000","https://excel-analyzer-bice.vercel.app/"]
 app.use(
   cors({
     origin:allowedOrigins , // React frontend URL
